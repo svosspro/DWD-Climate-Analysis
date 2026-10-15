@@ -1,4 +1,4 @@
-![](media/image1.png){width="6.3in" height="3.932727471566054in"}
+![](media/FarmWissen_DWD.png){width="6.3in" height="3.932727471566054in"}
 
 **Wetterdaten für den eigenen Standort automatisch auswerten**
 

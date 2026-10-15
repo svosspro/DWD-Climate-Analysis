@@ -81,7 +81,14 @@ Ausgabeordner gespeichert.
 
 **Einrichtung**
 
-**Schritt 1: R installieren**
+**Schritt 1: Download des zip-Ordners mit der Anwendung**
+
+Laden Sie den zip-Ordner unter folgendem Link herunter:
+<https://github.com/svosspro/DWD-Climate-Analysis/blob/main/Anwendung.zip>
+und entpacken Sie ihn auf Ihrer Festplatte.
+![](media/image2.png)
+
+**Schritt 2: R installieren**
 
 R ist eine kostenlose Softwareumgebung für statistische Berechnungen und
 die Erstellung von Grafiken. Das R-Skript nutzt sie, um die Wetterdaten
@@ -96,7 +103,7 @@ Computing**](https://www.r-project.org/)
 Unter Windows führt der Download über CRAN zum passenden
 Installationsprogramm.
 
-**Schritt 2: RStudio installieren**
+**Schritt 3: RStudio installieren**
 
 RStudio ist eine Entwicklungsumgebung, mit der sich R-Skripte
 übersichtlich öffnen und ausführen lassen. Sie erleichtert insbesondere
@@ -111,32 +118,26 @@ Posit**](https://posit.co/downloads/)
 Installieren Sie R zuerst und anschließend RStudio. RStudio ersetzt R
 nicht, sondern dient als Arbeitsoberfläche dafür.
 
-**Schritt 3: Die Anwendungsdateien vorbereiten**
+**Schritt 4: Die Anwendungsdateien vorbereiten**
 
 Speichern Sie die beiden Dateien in einem gemeinsamen Ordner:
 
--   FarmWissen_DWD_Auswertung_v6.R
+-   FarmWissen_DWD_Auswertung.R
 
--   FarmWissen_DWD_Eingabe_v6.xlsx
+-   FarmWissen_DWD_Eingabe.xlsx
 
-Öffnen Sie RStudio und stellen Sie sicher, dass dieser Ordner als
-Arbeitsverzeichnis verwendet wird. Das ist wichtig, damit das Skript die
+Schließen Sie RStudio, falls es geöffnet ist und Doppelklicken Sie auf
+FarmWissen_DWD_Auswertung.R, so dass sich RStudio im richtigen
+Arbeitsverzeichnis öffnet. Das ist wichtig, damit das Skript die
 Excel-Datei findet und die Ergebnisse am erwarteten Ort ablegt.
 
 Beim ersten Start prüft das Skript, ob die benötigten R-Pakete vorhanden
 sind. Fehlende Pakete werden automatisch installiert. Dafür muss eine
 Internetverbindung bestehen.
 
-**Zusätzliche Voraussetzung für die Stationskarte:** Wenn die
-Aktualisierung der DWD-Stationsliste und -karte in Excel aktiviert ist,
-benötigt das Skript außerdem die Geodaten-Datei shp/NUTS250_N1.shp
-einschließlich der zugehörigen Shapefile-Bestandteile im Unterordner
-shp. Ohne diese Dateien sollte die Kartenaktualisierung deaktiviert
-werden.
-
 **Durchführung**
 
-**Schritt 4: Den gewünschten Standort eingeben**
+**Schritt 5: Den gewünschten Standort eingeben**
 
 Öffnen Sie die Excel-Datei und wechseln Sie zum Tabellenblatt
 **„Eingaben"**. Tragen Sie den Breitengrad und Längengrad des
@@ -156,7 +157,7 @@ Die Anwendung verwendet somit Messwerte einer DWD-Station und keine
 direkt am Standort erhobenen Messwerte. Die Entfernung zur ausgewählten
 Station wird in den Diagrammen angegeben.
 
-**Schritt 5: Auswertung einstellen**
+**Schritt 6: Auswertung einstellen**
 
 In der Excel-Datei können Sie folgende Einstellungen vornehmen:
 
@@ -173,8 +174,8 @@ In der Excel-Datei können Sie folgende Einstellungen vornehmen:
 -   **Beschriftungen:** Legen Sie fest, ob ausgewählte Endwerte und
     Abweichungen in den Diagrammen beschriftet werden.
 
--   **Niederschlagsdarstellung:** Wählen Sie zwischen „Korridor" und
-    „Alle Jahre". Im Korridormodus wird die historische Streuung als
+-   **Darstellung historische Referenz:** Wählen Sie zwischen „Korridor"
+    und „Alle Jahre". Im Korridormodus wird die historische Streuung als
     farblich abgesetzter Bereich dargestellt. Bei „Alle Jahre" werden
     die einzelnen historischen Jahresverläufe als Linien angezeigt.
 
@@ -187,15 +188,16 @@ In der Excel-Datei können Sie folgende Einstellungen vornehmen:
 
 Speichern Sie die Excel-Datei nach der Änderung.
 
-**Schritt 6: Das R-Skript starten**
+**Schritt 7: Das R-Skript starten**
 
-Öffnen Sie FarmWissen_DWD_Auswertung_v6.R in RStudio. Stellen Sie
-sicher, dass das richtige Arbeitsverzeichnis eingestellt ist und die
-Excel-Datei dort liegt.
+Öffnen Sie FarmWissen_DWD_Auswertung.R durch Doppelklick. RStudio muss
+vorher geschlossen sein. Somit stellen Sie sicher, dass das richtige
+Arbeitsverzeichnis eingestellt ist.
 
-Führen Sie das Skript mit der Schaltfläche **„Source"** im Skriptfenster
-aus. Beim ersten Durchlauf kann die Ausführung länger dauern, weil
-benötigte Pakete installiert und Wetterdaten heruntergeladen werden.
+Führen Sie das Skript mit der Schaltfläche **„Source"**
+![](media/image3.png) im Skriptfenster aus. Beim ersten
+Durchlauf kann die Ausführung länger dauern, weil benötigte Pakete
+installiert und Wetterdaten heruntergeladen werden.
 
 Das Skript sucht eine geeignete DWD-Station, lädt die verfügbaren
 Tagesdaten für die gewählten Parameter herunter und berechnet die
@@ -211,7 +213,7 @@ Arbeitsverzeichnis.
 
 **Auswertung und Datenmanagement**
 
-**Schritt 7: Jahresverlauf im historischen Vergleich**
+**Schritt 8: Jahresverlauf im historischen Vergleich**
 
 Das Jahresdiagramm zeigt, wie sich die Witterung seit Jahresbeginn
 entwickelt hat.
@@ -233,7 +235,7 @@ Alternativ können die einzelnen historischen Jahresverläufe als graue
 Linien dargestellt werden. So wird sichtbar, wie stark die Witterung
 zwischen den Jahren schwankt.
 
-**Schritt 8: Monatsdarstellung**
+**Schritt 9: Monatsdarstellung**
 
 Die Monatsdarstellung unterteilt das Jahr in zwölf einzelne
 Monatsdiagramme. Dadurch lassen sich Unterschiede zwischen den Monaten
@@ -249,7 +251,7 @@ Die Darstellung unterstützt dabei, beispielsweise einen ungewöhnlich
 trockenen Monatsverlauf oder eine auffällige Temperaturentwicklung zu
 erkennen.
 
-**Schritt 9: Monatliche Abweichungen**
+**Schritt 10: Monatliche Abweichungen**
 
 Die Abweichungsdiagramme zeigen, wie sich ausgewählte Jahre gegenüber
 der historischen Referenz unterscheiden.
@@ -259,41 +261,29 @@ historischen Werte jeweils nur bis zum gleichen Kalendertag des
 betreffenden Monats berücksichtigt. Dadurch können auch noch nicht
 abgeschlossene Monate sinnvoller verglichen werden.
 
-Beim Niederschlag werden positive Abweichungen blau und negative
-Abweichungen rot dargestellt. Bei der Temperatur werden positive
-Abweichungen rot und negative Abweichungen blau dargestellt.
-
 Die Balken zeigen, ob bis zum jeweiligen Stichtag mehr oder weniger
 Niederschlag gefallen ist beziehungsweise ob die Temperatur über oder
 unter der historischen Referenz liegt.
 
-**Schritt 10: Wetterkalender lesen**
+**Schritt 11: Wetterkalender lesen**
 
 Für jedes ausgewählte Jahr wird zusätzlich ein Wetterkalender erstellt.
 Jeder Tag ist als farbiges Feld dargestellt. Die Farbe zeigt den
 täglichen Niederschlagswert beziehungsweise die tägliche mittlere
-Temperatur an.
+Temperatur an. Graue Felder kennzeichnen fehlende Messwerte.
 
-Beim Niederschlag reicht die Farbskala von Weiß über Blau und Rot bis
-Lila. Die Skala wird anhand der ausgewählten Jahre bestimmt und ist
-innerhalb dieses Vergleichs einheitlich. Bei der Temperatur reicht die
-feste Farbskala von niedrigen, blauen Werten über helle und warme Farben
-bis zu violetten Farbtönen bei hohen Temperaturen.
+Die Kalenderübersicht hilft dabei, einzelne besonders nasse, trockene,
+kalte oder warme Tage schnell zu erkennen und den Verlauf innerhalb
+eines Jahres zu überblicken.
 
-Graue Felder kennzeichnen fehlende Messwerte. Die Kalenderübersicht
-hilft dabei, einzelne besonders nasse, trockene, kalte oder warme Tage
-schnell zu erkennen und den Verlauf innerhalb eines Jahres zu
-überblicken.
-
-**Schritt 11: PDF-Dateien und weitere Ergebnisse verwenden**
+**Schritt 12: PDF-Dateien und weitere Ergebnisse verwenden**
 
 Die PDF-Dateien werden im in Excel angegebenen Ausgabeordner abgelegt.
 Für Niederschlag und Temperatur wird jeweils eine eigene Datei erzeugt,
 sofern der entsprechende Parameter aktiviert ist.
 
-Die Dateien können gespeichert, ausgedruckt, in Berichte übernommen oder
-mit anderen Personen geteilt werden. Wird das Skript erneut ausgeführt,
-werden neue PDF-Dateien mit dem aktuellen Datum im Dateinamen erstellt.
+Wird das Skript erneut ausgeführt, werden neue PDF-Dateien mit dem
+aktuellen Datum im Dateinamen erstellt.
 
 Wenn die Aktualisierung der Stationsliste und -karte aktiviert ist,
 erzeugt das Skript außerdem eine Datei mit Stationsinformationen und
@@ -366,13 +356,15 @@ Bewässerungsempfehlung.
 
 -   RStudio Desktop -- Entwicklungsumgebung
 
--   R-Pakete unter anderem für Excel-Dateien, Datenaufbereitung,
-    Diagramme, Webzugriff und Geodaten
+-   Excel
 
-**Datenquelle**
+**Datenquellen**
 
 -   Deutscher Wetterdienst (DWD), Climate Data Center: [Frei verfügbare
     Klimadaten](https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/)
+
+-   BKG (<https://www.bkg.bund.de>), dl-de/by-2-0
+    (<https://www.govdata.de/dl-de/by-2-0>)
 
 **Ergebnisse**
 
@@ -403,10 +395,8 @@ fachliche Beurteilung.
 
 **Informationen zu Autoren**
 
-**Autor/in:** \[Name ergänzen\]\
-**Institution/Projekt:** \[Institution oder Projekt ergänzen\]\
-**Kontakt:** \[E-Mail-Adresse ergänzen\]
+**Autor/in:** Sebastian Voß\
+**Institution/Projekt:** Leibniz-Institut für Agrartechnik und
+Bioökonomie e.V. (ATB)\
+**Kontakt:** <svoss@atb-potsdam.de>
 
-Sofern nicht anders gekennzeichnet, stehen FARMWISSEN-Inhalte unter der
-Lizenz CC BY-SA 4.0. Bitte prüfen Sie vor der Veröffentlichung die für
-den Beitrag geltenden Lizenz- und Autorenangaben.

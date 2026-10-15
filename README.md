@@ -1,4 +1,4 @@
-![](media/image1.png){width="6.30625in" height="3.9402777777777778in"}
+![](media/FarmWissen_DWD.png)
 
 **Wetterdaten für den eigenen Standort automatisch auswerten**
 
@@ -86,8 +86,7 @@ Ausgabeordner gespeichert.
 Laden Sie den zip-Ordner unter folgendem Link herunter:
 <https://github.com/svosspro/DWD-Climate-Analysis/blob/main/Anwendung.zip>
 und entpacken Sie ihn auf Ihrer Festplatte.
-![](media/image2.png){width="1.3943241469816272in"
-height="0.5323786089238846in"}
+![](media/image2.png)
 
 **Schritt 2: R installieren**
 
@@ -179,8 +178,7 @@ vorher geschlossen sein. Somit stellen Sie sicher, dass das richtige
 Arbeitsverzeichnis eingestellt ist.
 
 Führen Sie das Skript mit der Schaltfläche **„Source"**
-![](media/image3.png){width="0.6978291776027996in"
-height="0.22913823272090988in"} im Skriptfenster aus. Beim ersten
+![](media/image3.png)} im Skriptfenster aus. Beim ersten
 Durchlauf kann die Ausführung länger dauern, weil benötigte Pakete
 installiert und Wetterdaten heruntergeladen werden.
 

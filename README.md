@@ -1,4 +1,4 @@
-![](media/FarmWissen_DWD.png)
+![](media/image1.png){width="6.30625in" height="3.9402777777777778in"}
 
 **Wetterdaten für den eigenen Standort automatisch auswerten**
 
@@ -86,7 +86,8 @@ Ausgabeordner gespeichert.
 Laden Sie den zip-Ordner unter folgendem Link herunter:
 <https://github.com/svosspro/DWD-Climate-Analysis/blob/main/Anwendung.zip>
 und entpacken Sie ihn auf Ihrer Festplatte.
-![](media/image2.png)
+![](media/image2.png){width="1.3943241469816272in"
+height="0.5323786089238846in"}
 
 **Schritt 2: R installieren**
 
@@ -118,26 +119,9 @@ Posit**](https://posit.co/downloads/)
 Installieren Sie R zuerst und anschließend RStudio. RStudio ersetzt R
 nicht, sondern dient als Arbeitsoberfläche dafür.
 
-**Schritt 4: Die Anwendungsdateien vorbereiten**
-
-Speichern Sie die beiden Dateien in einem gemeinsamen Ordner:
-
--   FarmWissen_DWD_Auswertung.R
-
--   FarmWissen_DWD_Eingabe.xlsx
-
-Schließen Sie RStudio, falls es geöffnet ist und Doppelklicken Sie auf
-FarmWissen_DWD_Auswertung.R, so dass sich RStudio im richtigen
-Arbeitsverzeichnis öffnet. Das ist wichtig, damit das Skript die
-Excel-Datei findet und die Ergebnisse am erwarteten Ort ablegt.
-
-Beim ersten Start prüft das Skript, ob die benötigten R-Pakete vorhanden
-sind. Fehlende Pakete werden automatisch installiert. Dafür muss eine
-Internetverbindung bestehen.
-
 **Durchführung**
 
-**Schritt 5: Den gewünschten Standort eingeben**
+**Schritt 4: Den gewünschten Standort eingeben**
 
 Öffnen Sie die Excel-Datei und wechseln Sie zum Tabellenblatt
 **„Eingaben"**. Tragen Sie den Breitengrad und Längengrad des
@@ -157,7 +141,7 @@ Die Anwendung verwendet somit Messwerte einer DWD-Station und keine
 direkt am Standort erhobenen Messwerte. Die Entfernung zur ausgewählten
 Station wird in den Diagrammen angegeben.
 
-**Schritt 6: Auswertung einstellen**
+**Schritt 5: Auswertung einstellen**
 
 In der Excel-Datei können Sie folgende Einstellungen vornehmen:
 
@@ -188,14 +172,15 @@ In der Excel-Datei können Sie folgende Einstellungen vornehmen:
 
 Speichern Sie die Excel-Datei nach der Änderung.
 
-**Schritt 7: Das R-Skript starten**
+**Schritt 6: Das R-Skript starten**
 
 Öffnen Sie FarmWissen_DWD_Auswertung.R durch Doppelklick. RStudio muss
 vorher geschlossen sein. Somit stellen Sie sicher, dass das richtige
 Arbeitsverzeichnis eingestellt ist.
 
 Führen Sie das Skript mit der Schaltfläche **„Source"**
-![](media/image3.png) im Skriptfenster aus. Beim ersten
+![](media/image3.png){width="0.6978291776027996in"
+height="0.22913823272090988in"} im Skriptfenster aus. Beim ersten
 Durchlauf kann die Ausführung länger dauern, weil benötigte Pakete
 installiert und Wetterdaten heruntergeladen werden.
 
@@ -213,7 +198,7 @@ Arbeitsverzeichnis.
 
 **Auswertung und Datenmanagement**
 
-**Schritt 8: Jahresverlauf im historischen Vergleich**
+**Schritt 7: Jahresverlauf im historischen Vergleich**
 
 Das Jahresdiagramm zeigt, wie sich die Witterung seit Jahresbeginn
 entwickelt hat.
@@ -235,7 +220,7 @@ Alternativ können die einzelnen historischen Jahresverläufe als graue
 Linien dargestellt werden. So wird sichtbar, wie stark die Witterung
 zwischen den Jahren schwankt.
 
-**Schritt 9: Monatsdarstellung**
+**Schritt 8: Monatsdarstellung**
 
 Die Monatsdarstellung unterteilt das Jahr in zwölf einzelne
 Monatsdiagramme. Dadurch lassen sich Unterschiede zwischen den Monaten
@@ -251,7 +236,7 @@ Die Darstellung unterstützt dabei, beispielsweise einen ungewöhnlich
 trockenen Monatsverlauf oder eine auffällige Temperaturentwicklung zu
 erkennen.
 
-**Schritt 10: Monatliche Abweichungen**
+**Schritt 9: Monatliche Abweichungen**
 
 Die Abweichungsdiagramme zeigen, wie sich ausgewählte Jahre gegenüber
 der historischen Referenz unterscheiden.
@@ -265,7 +250,7 @@ Die Balken zeigen, ob bis zum jeweiligen Stichtag mehr oder weniger
 Niederschlag gefallen ist beziehungsweise ob die Temperatur über oder
 unter der historischen Referenz liegt.
 
-**Schritt 11: Wetterkalender lesen**
+**Schritt 10: Wetterkalender lesen**
 
 Für jedes ausgewählte Jahr wird zusätzlich ein Wetterkalender erstellt.
 Jeder Tag ist als farbiges Feld dargestellt. Die Farbe zeigt den
@@ -276,7 +261,7 @@ Die Kalenderübersicht hilft dabei, einzelne besonders nasse, trockene,
 kalte oder warme Tage schnell zu erkennen und den Verlauf innerhalb
 eines Jahres zu überblicken.
 
-**Schritt 12: PDF-Dateien und weitere Ergebnisse verwenden**
+**Schritt 11: PDF-Dateien und weitere Ergebnisse verwenden**
 
 Die PDF-Dateien werden im in Excel angegebenen Ausgabeordner abgelegt.
 Für Niederschlag und Temperatur wird jeweils eine eigene Datei erzeugt,
@@ -399,4 +384,3 @@ fachliche Beurteilung.
 **Institution/Projekt:** Leibniz-Institut für Agrartechnik und
 Bioökonomie e.V. (ATB)\
 **Kontakt:** <svoss@atb-potsdam.de>
-
